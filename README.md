@@ -5,10 +5,10 @@
 
 ### Categories
 
-*[Backend](#backend)
-*[Network](#network)
-*[Devops](#devops)
-*[MLOps](#mlops)
+* [Backend](#backend)  
+* [Network](#network)  
+* [Devops](#devops)  
+* [MLOps](#mlops)  
 
 ---
 
