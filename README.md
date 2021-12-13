@@ -14,6 +14,7 @@
 ### Categories
 
 * [Backend](#backend)  
+* [Frontend](#frontend)
 * [Network](#network)  
 * [Devops](#devops)  
 * [MLOps](#mlops)  
@@ -22,6 +23,10 @@
 
 ### Backend
 - [cors](backend/cors.md)
+- [GraphQL](backend/graphql.md)
+
+### Frontend
+- [react][frontend/react.md]
 
 ### Network
 
