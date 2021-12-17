@@ -14,3 +14,5 @@
 ## 그 외 여러가지 특징
 - JSX(Java Script Extended), JSX 는 리액트에서 생김새를 정의할 때, 사용하는 문법이다. babel이 JSX를 JS로 변환시켜준다.
 
+## React 공식 문서 메모
+- Element가 react의 가장 작은 단위이다. Element는 component의 구성요소이다. 
