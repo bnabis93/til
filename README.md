@@ -23,10 +23,10 @@
 
 ### Backend
 - [cors](backend/cors.md)
-- [GraphQL](backend/graphql.md)
 
 ### Frontend
 - [react][frontend/react.md]
+- [GraphQL](frontend/graphql.md)
 
 ### Network
 
