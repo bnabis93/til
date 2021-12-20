@@ -186,7 +186,7 @@ query {
 ```
 
 #### Interface & Union type
-
+- [TODO]
 
 ### Mutation overview
 - INSERT, UPDATE, DELETE 을 위해서는 mutation을 사용해야함. (쿼리는 읽기전용)
@@ -244,9 +244,50 @@ mutation closeLift{
     2. 이를 더 작은 단위로 쪼갠다. (lexing, lexical analysis, 어휘화)
     3. 충분히 작은 단위로 쪼갠 후, AST로 가공한다. (트리구조로 바꾼다.)
     
+### Schema
+- 어떤 Type을 가질지, 어떤 mutation, query를 가질지 사전 설계를 하는 것
+- 이를 위하여 SDL(Schema Definition Language) 을 지원한다.
 
+### Type
+- GraphQL의 핵심 단위
+- 객체에 대한 이름. 
+- Type 내에는 field가 존재한다. field는 특정 종류의 데이터를 반환한다.
+- 다음은 Photo 라는 type을 정의하고, 내부에 여러 field를 정의한 것 이다. 
+    - !는 null을 허용하지 않겠다는 의미이다. 
+```
+type Photo{
+    id : ID!
+    name : String!
+    url : String!
+    description : String
+}
+```
+### Scalar type과 enumeration type
+- 커스텀 scalar type 지정 가능. 이또한 어딘가에 사전 정의된것으로 추정되는데... 확실하지 않음
+- 예를들어 밑에는 DataTime이라는 scalar type을 만들었음.
+- 열거또한 일종의 scalar typeㅇ다. 
+- 반환해야 하는 문자열 값을 미리 지정 할 수 있다. 
+- PhotoCategory는 SELFIE, PORTRAIT, ACTION, LANDSCAPE, GRAPHIC 중 하나만 값으로 반환이 가능하다. 
+```
+scalar DataTime
 
+enum PhotoCategory{
+    SELFIE
+    PORTRAIT
+    ACTION
+    LANDSCAPE
+    GRAPHIC
+}
+```
+### 연결과 리스트
+- GraphQL 타입의 리스트도 반환 가능하다. [String] 처럼 [] 로 감싸면 된다. 
+- GraphQL의 연결에는 최대한 방향성이 없도록 설계하는것이 좋다. 
+### 일대일 연결
+- A라는 타입이 B라는 타입에 종속적일 때.
+- 예를 들어 A타입 내부에 B라는 타입이 들어있을때. (이럴때는 방향성이 생긴다.)
+### 일대다 연결
 
+### 다대다 연결
 
 ## Reference
 - 웹 앱 API 개발을 위한 GraphQL
