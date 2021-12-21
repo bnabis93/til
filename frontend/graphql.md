@@ -1,3 +1,6 @@
+[TODO] : Union, Interface
+[TODO] : Data paging (schema)
+
 # GraphQL
 - API를 만들 때 사용 할 수 있는 쿼리언어.
 - 쿼리에 대한 데이터를 받을 수 있는 런타임.
@@ -288,6 +291,50 @@ enum PhotoCategory{
 ### 일대다 연결
 
 ### 다대다 연결
+
+### 인자
+- Schema에도 인자를 넣을 수 있다. 
+- 만약 스키마 타입에 인자를 넣어줬다면 쿼리를 날릴때도 꼭 그 인자값을 포함해야한다. (물론 스키마에서 null 허용하면 괜춘)
+    - 만약 null 반활 할 수 있게 만들면, 쿼리 날릴 때 인자는 옵션이 된다.
+- 커스텀 스칼라 타입을 인자로 넣어주고, 해당 값중 하나를 가지도록 할 수도 있다. 
+- Data paging 이라는 기능도 있는데, 하나의 웹 페이지에 나올 데이터의 양을 정해준다. -> 여러개의 인자값으로 조절하는데, 뭔가 명확하지 않다.
+- sort, sortBy 값으로 소팅도 가능하다. 
+```
+enum PhotoCategory{
+    SELFIE
+    PORTRAIT
+    ACTION
+    LANDSCAPE
+    GRAPHIC
+}
+
+type Query{
+    allPhotos(category : PhotoCategory): [Photo!]!
+}
+```
+### 뮤테이션(mutation)
+- 뮤테이션도 반드시 스키마에 사전 정의해야 한다.
+```
+type Mutation{
+    postPhoto{
+        name: String!
+        description : String
+        category : PhotoCategory = PORTRAIT
+    }:Photo!
+}
+
+schema{
+    query : Query
+    mutation : Mutation
+}
+```
+
+### Input 타입
+- 인자에서만 사용된다. 
+- 뭔가 mutation에서 사용하는 커스텀한 타입을 만드는 것 같다. (쿼리의 enum같이) 
+
+### Return 타입
+
 
 ## Reference
 - 웹 앱 API 개발을 위한 GraphQL
