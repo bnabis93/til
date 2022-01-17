@@ -36,4 +36,5 @@
 ### Devops
 
 ### MLOps
-
+- [Data versioning tool](mlops/data-versioning.md)
+- [Data versioning tool, lakeFS](mlops/lakeFS.md)
