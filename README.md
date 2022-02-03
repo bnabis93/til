@@ -35,6 +35,9 @@
 
 ### Devops
 
+### ML
+- [Pytorch-tips, save and load model](ml/pytorch-tips/save_load.md)
+
 ### MLOps
 - [Data versioning tool](mlops/data-versioning.md)
 - [Data versioning tool, lakeFS](mlops/lakeFS.md)
