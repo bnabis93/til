@@ -18,3 +18,53 @@
 ### Unit test
 - 소스 코드의 특정 모듈이 개발자가 의도한 대로 잘 동작하는지를 검증하는 절차이다.
 - Module test라고도 한다.
+
+----
+
+## Static test tools (python)
+### Code complexity 
+- radon
+```
+pip install radon
+radon cc <FILE PATH> -s
+
+./cs/python/radon_example.py
+    F 1:0 test_radon - A (3)
+    F 10:0 test_radon2 - A (1)
+```
+
+### Style guide
+- pycodestyle
+```
+pip install pycodestyle
+
+pycodestyle --first ./cs/python/radon_example.py 
+./cs/python/radon_example.py:5:20: W291 trailing whitespace
+./cs/python/radon_example.py:11:9: E225 missing whitespace around operator
+./cs/python/radon_example.py:13:1: E305 expected 2 blank lines after class or function definition, found 1
+./cs/python/radon_example.py:16:13: W292 no newline at end of file
+
+```
+- pyflake
+```
+pip install --upgrade pyflakes
+
+pyflakes ./cs/python/radon_example.py
+./cs/python/radon_example.py:11:5 local variable 'temp' is assigned to but never used
+```
+
+- flake8
+```
+pip install flake8
+
+flake8 ./cs/python/radon_example.py 
+./cs/python/radon_example.py:5:20: W291 trailing whitespace
+./cs/python/radon_example.py:7:20: W291 trailing whitespace
+./cs/python/radon_example.py:11:5: F841 local variable 'temp' is assigned to but never used
+./cs/python/radon_example.py:11:9: E225 missing whitespace around operator
+./cs/python/radon_example.py:13:1: E305 expected 2 blank lines after class or function definition, found 1
+./cs/python/radon_example.py:16:13: W292 no newline at end of file
+```
+
+### Git hook
+- https://techblog.woowahan.com/2530/
