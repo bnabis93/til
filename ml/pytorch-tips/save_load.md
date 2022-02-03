@@ -1,21 +1,3 @@
----
-
-그동안 베일에 쌓여져 있던 Annowiz 1.0. zerontech의 segmentation model 아키텍쳐는 U2Net ([https://github.com/xuebinqin/U-2-Net](https://github.com/xuebinqin/U-2-Net)) 입니다.weights 값만 저장된 형태의 .pth 파일만 접근이 가능했는데,
-
-1. model weights load 후 key값 이름이 뭔가 익숙해서
-2. 검색을 해봤더니
-3. U2-Net이 나와서
-4. 혹시나 싶어 U2Net 아키텍처를 가지고와서
-5. 웨이트값을 넣어봤더니
-6. 아주 잘 넣어지고 inference도 잘 됩니다. (==shape이 같다)
-
-그래서
-
-1. 모델 아키텍처를 알아버렸으니 현재 불편한 과정 (.exe 파일로 배포된 형태) 를 벗어나 모델 inference API 를 만들 수 있을 것 같습니다.
-2. 언젠가는 독자적인 모델을 만들어야겠지만, 일단은 그냥 쓰면서 후처리정도만 테스트 하고, 좀 더 급한 기능 (versioning 등) 을 먼저 개발해도 좋을 것 같습니다.
-
-[https://annotation-ai.slack.com/archives/C02NFTHLKHP/p1642667257008200](https://annotation-ai.slack.com/archives/C02NFTHLKHP/p1642667257008200)
-
 # Torch 에서의 두가지 모델 저장 방법
 
 [https://pytorch.org/tutorials/beginner/saving_loading_models.html](https://pytorch.org/tutorials/beginner/saving_loading_models.html)
