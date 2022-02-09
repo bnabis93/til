@@ -38,6 +38,7 @@
 ### ML
 - [Pytorch-tips, save and load model](ml/pytorch-tips/save_load.md)
 - [Pytorch-tips, torch onnx](ml/pytorch-tips/torch_onnx.md)
+- [Pytorch-tips, variable and tensor](ml/pytorch-tips/variable_tensor.md)
 
 ### MLOps
 - [Data versioning tool](mlops/data-versioning.md)
