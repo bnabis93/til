@@ -22,7 +22,10 @@
 ---
 
 ### CS
-- [program-process-thread](cs/program-process-thread.md)
+- [program-process-thread](cs/basic/program-process-thread.md)
+- [test](cs/basic/test.md)
+- [Class-Composition-Aggregation](cs/basic/class-composition-aggregation.md)
+- [radon_example](cs/python/radon_example.py)
 
 ### Backend
 - [cors](backend/cors.md)
