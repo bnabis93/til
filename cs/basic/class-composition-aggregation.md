@@ -32,6 +32,7 @@
 - 포함관계에 있지만, 서로의 life cycle 에는 영향을 주지 않는다. 
 
 ### Composition code
+- [Composition code](./composition.py)
 - Department 내부에 Student가 선언되었다.
 - 내부에서 선언되었으니 Department는 student의 기능도 사용가능하다.
 - 따라서 Department가 소멸되면 student도 소멸된다. 주종 관계를 가지게 된다.
