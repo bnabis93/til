@@ -2,6 +2,10 @@
 > Today I Learned
 - 그날배운것을 정리하는 공간. 
 
+### TODO
+- 자동으로 dir 탐색 후, README 생성
+
+
 ### Rules  
 - 한국어로 정리 하려함
 - 폴더는 기술 카테고리, 파일은 내가 공부한 내용
@@ -26,6 +30,7 @@
 - [test](cs/basic/test.md)
 - [Class-Composition-Aggregation](cs/basic/class-composition-aggregation/)
 - [radon_example](cs/python/radon_example.py)
+- [pytest](cs/python/pytest/)
 
 ### Backend
 - [cors](backend/cors.md)
