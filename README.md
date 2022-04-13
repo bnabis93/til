@@ -51,6 +51,7 @@
 - [Pytorch-tips, variable and tensor](ml/pytorch-tips/variable_tensor.md)
 - [torch-mnist-example](ml/example/mnist-torch/)
 - [TensorRT, Basic](ml/tensorrt/basic.md)
+- [TensorRT, implicit-explicit batch](ml/tensorrt//implicit_explicit_batch.md)
 
 ### MLOps
 - [Data versioning tool](mlops/data-versioning.md)
