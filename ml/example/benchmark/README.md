@@ -42,7 +42,29 @@ make setup
 ## How to run
 - 실험에서 if문의 context swiching 비용은 무시한다.
 ```bash
+sh experiment.sh
+```
 
+## Experiment result
+- 참고로 cuda sync false / cuda time true의 경우 에러
+```
+warmup False cuda sync True cuda time True
+Average time: 4.93 ms
+
+warmup False cuda sync True cuda time False
+Average time: 4.95 ms
+
+warmup False cuda sync False cuda time False
+Average time: 4.95 ms
+
+warmup True cuda sync True cuda time True
+Average time: 4.67 ms
+
+warmup True cuda sync True cuda time False
+Average time: 4.48 ms
+
+warmup True cuda sync False cuda time False
+Average time: 4.51 ms
 ```
 
 
