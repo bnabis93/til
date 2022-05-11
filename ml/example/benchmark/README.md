@@ -1,4 +1,8 @@
 # Pytorch에서 확실하게 model inference speed benchmark를 하는 방법
+## 한계점
+- cuda_sync는 cpu-gpu bottleneck (data copy등)이 클때 더 드라마틱하게 차이를 보일 것이다. 이에 대한 실험을 못함
+- 또한 Multi gpu 상황에서도 cuda_sync가 차이를 보일 것이다. 역시나 실험 못함
+
 ## 통제해야하는 변수
 - GPU warmup
 - GPU 동기화
