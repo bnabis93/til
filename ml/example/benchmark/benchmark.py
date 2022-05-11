@@ -2,7 +2,6 @@ import argparse
 import time
 from typing import Tuple
 
-import as
 import numpy as np
 import torch
 import torchvision.models as models
@@ -30,10 +29,10 @@ args = parser.parse_args()
 
 def benchmark(
     model: torch.nn.Module,
-    input_shape: Tuple(int, int, int, int) = (1, 1, 224, 224),
+    device : str,
+    input_shape: Tuple[int, int, int, int] = (1, 3, 224, 224),
     nwarmup : int =50,
     nruns : int =1000,
-    device : str,
 ):
     """Benchmark module."""
     input_data = torch.randn(input_shape)
@@ -54,10 +53,11 @@ def benchmark(
             else:
                 start_time = time.time()
             features = model(input_data)
+            if args.cuda_time:
+                end_time.record()
             if args.cuda_sync:
                 torch.cuda.synchronize()
             if args.cuda_time:
-                end_time.record()
                 curr_time = start_time.elapsed_time(end_time)/1000
             else:
                 end_time = time.time()
