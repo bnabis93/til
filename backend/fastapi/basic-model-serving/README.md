@@ -20,6 +20,14 @@ $ curl localhost:8000/healthcheck
 true
 ```
 
+## Client
+```bash
+$ python src/client.py --data data/dog.jpeg
+
+# If you want to decodeing test
+$ python src/client.py --data data/dog.jpeg --decode_test 1
+```
+
 
 ## Dataset
 - Use google open image
