@@ -10,6 +10,8 @@ import base64
 import cv2
 import numpy as np
 
+from ml.inference import inference
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--data", type=str, required=True, help="Test data path")
 parser.add_argument("--decode_test", default=0, type=int, help="Decoding test")
@@ -42,3 +44,6 @@ if __name__ == "__main__":
         print("Decoding test")
         decoded_image = decode_from_bin(encoded_image)
         cv2.imwrite("./test.jpeg", decoded_image)
+
+        result = inference(decoded_image)
+        print(result)

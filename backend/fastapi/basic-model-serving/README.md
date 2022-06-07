@@ -9,6 +9,7 @@ $ make setup
 ## Download ImageNet pretrained resnet model
 ```bash
 $ python src/ml/download_model.py
+$ curl -O https://raw.githubusercontent.com/pytorch/hub/master/imagenet_classes.txt
 ```
 
 ## Run the server
@@ -26,6 +27,8 @@ $ python src/client.py --data data/dog.jpeg
 
 # If you want to decodeing test
 $ python src/client.py --data data/dog.jpeg --decode_test 1
+Decoding test
+Pembroke
 ```
 
 
