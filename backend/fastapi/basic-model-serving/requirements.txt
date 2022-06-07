@@ -2,7 +2,7 @@
 pytorch == 1.11.0
 torchvision == 0.12.0 
 numpy
-
+opencv
 # backend, latest stable version == 0.75.1
 fastapi             == 0.75.1
 uvicorn[standard]   == 0.17.4
