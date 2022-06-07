@@ -10,6 +10,12 @@ from pydantic import BaseModel, Field
 
 
 class EncodedImage(BaseModel):
-    """Definition of dummy packet."""
+    """Definition of encoded imgae schemas."""
 
     image: str = Field(..., desciption="Base64 encoded image")
+
+
+class PredOutput(BaseModel):
+    """Definition of pred output"""
+
+    pred: str = Field(..., description="prediction output")

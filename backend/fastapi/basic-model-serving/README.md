@@ -24,11 +24,13 @@ true
 ## Client
 ```bash
 $ python src/client.py --data data/dog.jpeg
+{"prediction":"Pembroke"}
 
 # If you want to decodeing test
 $ python src/client.py --data data/dog.jpeg --decode_test 1
 Decoding test
 Pembroke
+{"prediction":"Pembroke"}
 ```
 
 

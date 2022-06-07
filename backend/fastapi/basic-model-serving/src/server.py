@@ -8,7 +8,7 @@ from https://fastapi.tiangolo.com/tutorial/body/
 from fastapi import FastAPI
 
 from src.ml.inference import inference
-from src.schemas import EncodedImage
+from src.schemas import EncodedImage, PredOutput
 from src.utils import decode_from_bin
 
 app = FastAPI()
@@ -20,9 +20,9 @@ def healthcheck() -> bool:
     return True
 
 
-@app.post("/pred", response_model=EncodedImage)
+@app.post("/pred")
 def pred(encoded_image: EncodedImage) -> str:
     """Get inference result."""
     decoded_image = decode_from_bin(encoded_image.image)
     result = inference(decoded_image)
-    print(result)
+    return {"prediction": result}

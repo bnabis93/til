@@ -35,3 +35,4 @@ if __name__ == "__main__":
         print(result)
     req_body = {"image": encoded_image}
     req = requests.post(args.url, json=req_body)
+    print(req.text)
