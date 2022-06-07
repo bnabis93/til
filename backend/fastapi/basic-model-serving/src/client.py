@@ -16,7 +16,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--data", type=str, required=True, help="Test data path")
 parser.add_argument("--decode_test", default=0, type=int, help="Decoding test")
 parser.add_argument(
-    "--url", default="http://localhost:8000/inference", type=str, help="Fastapi url"
+    "--url", default="http://localhost:8000/pred", type=str, help="Fastapi url"
 )
 
 

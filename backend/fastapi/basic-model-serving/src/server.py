@@ -5,12 +5,9 @@ from https://fastapi.tiangolo.com/tutorial/body/
 - Email: qhsh9713@gmail.com
 - Referene : https://pydantic-docs.helpmanual.io/usage/schema/#field-customisation
 """
-
-import json
-
-import cv2
 from fastapi import FastAPI
 
+from src.ml.inference import inference
 from src.schemas import EncodedImage
 from src.utils import decode_from_bin
 
@@ -23,10 +20,9 @@ def healthcheck() -> bool:
     return True
 
 
-@app.post("/inference", response_model=EncodedImage)
-def inference(encoded_image: EncodedImage) -> str:
+@app.post("/pred", response_model=EncodedImage)
+def pred(encoded_image: EncodedImage) -> str:
     """Get inference result."""
     decoded_image = decode_from_bin(encoded_image.image)
-    cv2.imwrite("./test2.jpeg", decoded_image)
-
-    return None
+    result = inference(decoded_image)
+    print(result)
