@@ -5,33 +5,19 @@ from https://fastapi.tiangolo.com/tutorial/body/
 - Email: qhsh9713@gmail.com
 """
 import argparse
-import base64
 
 import cv2
-import numpy as np
+import requests
 
 from ml.inference import inference
+from utils import decode_from_bin, encode_from_cv2
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--data", type=str, required=True, help="Test data path")
 parser.add_argument("--decode_test", default=0, type=int, help="Decoding test")
-
-
-def decode_from_bin(bin_data):
-    "Decoding image"
-    bin_data = base64.b64decode(bin_data)
-    image = np.asarray(bytearray(bin_data), dtype=np.uint8)
-    # Should change RGB formt
-    img = cv2.imdecode(image, cv2.IMREAD_COLOR)
-    rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
-    return rgb_img
-
-
-def encode_from_cv2(img):
-    "Encoding image."
-    bin = cv2.imencode(".jpg", img)[1]
-    return str(base64.b64encode(bin), "utf-8")
+parser.add_argument(
+    "--url", default="http://localhost:8000/inference", type=str, help="Fastapi url"
+)
 
 
 if __name__ == "__main__":
@@ -47,3 +33,5 @@ if __name__ == "__main__":
 
         result = inference(decoded_image)
         print(result)
+    req_body = {"image": encoded_image}
+    req = requests.post(args.url, json=req_body)

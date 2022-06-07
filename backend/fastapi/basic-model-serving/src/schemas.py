@@ -9,9 +9,7 @@ https://stackoverflow.com/questions/64943693/what-are-the-best-practices-for-str
 from pydantic import BaseModel, Field
 
 
-class Inference(BaseModel):
+class EncodedImage(BaseModel):
     """Definition of dummy packet."""
 
     image: str = Field(..., desciption="Base64 encoded image")
-    height: int = Field(..., description="Image's height")  # ... -> value is required
-    width: str = Field(..., description="Image's width")
