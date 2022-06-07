@@ -1,4 +1,8 @@
 # Pytorch에서 확실하게 model inference speed benchmark를 하는 방법
+## 한계점
+- cuda_sync는 cpu-gpu bottleneck (data copy등)이 클때 더 드라마틱하게 차이를 보일 것이다. 이에 대한 실험을 못함
+- 또한 Multi gpu 상황에서도 cuda_sync가 차이를 보일 것이다. 역시나 실험 못함
+
 ## 통제해야하는 변수
 - GPU warmup
 - GPU 동기화
@@ -42,7 +46,29 @@ make setup
 ## How to run
 - 실험에서 if문의 context swiching 비용은 무시한다.
 ```bash
+sh experiment.sh
+```
 
+## Experiment result
+- 참고로 cuda sync false / cuda time true의 경우 에러
+```
+warmup False cuda sync True cuda time True
+Average time: 4.93 ms
+
+warmup False cuda sync True cuda time False
+Average time: 4.95 ms
+
+warmup False cuda sync False cuda time False
+Average time: 4.95 ms
+
+warmup True cuda sync True cuda time True
+Average time: 4.67 ms
+
+warmup True cuda sync True cuda time False
+Average time: 4.48 ms
+
+warmup True cuda sync False cuda time False
+Average time: 4.51 ms
 ```
 
 
