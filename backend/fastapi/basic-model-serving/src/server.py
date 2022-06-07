@@ -6,19 +6,11 @@ from https://fastapi.tiangolo.com/tutorial/body/
 - Referene : https://pydantic-docs.helpmanual.io/usage/schema/#field-customisation
 """
 
-
 from fastapi import FastAPI
-from pydantic import BaseModel, Field
+
+from src.schemas import Inference
 
 app = FastAPI()
-
-
-class Inference(BaseModel):
-    """Definition of dummy packet."""
-
-    image: str = Field(..., desciption="Base64 encoded image")
-    height: int = Field(..., description="Image's height")  # ... -> value is required
-    width: str = Field(..., description="Image's width")
 
 
 @app.get("/healthcheck")
