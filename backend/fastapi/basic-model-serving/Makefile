@@ -8,3 +8,4 @@ env:
 
 setup:
 	conda install --file requirements.txt $(addprefix -c ,$(CONDA_CH))
+
