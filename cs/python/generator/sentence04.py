@@ -16,7 +16,7 @@ class Sentence:
         self.text = text
 
     def __iter__(self):
-        for match in RE_WORD.finditer(self.text):
+        for match in RE_WORD.finditer(self.text): # matchObject 생성
             yield match.group()
 
     def __repr__(self):

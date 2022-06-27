@@ -17,5 +17,6 @@
 - e.g. `(match.group() for match in RE_WORD.finditer(self.text))`
 - [sentence class 05 example](./sentence05.py)
 - 아무래도 Lazy 하기 때문에 메모리 사용량에서 이점이 있다. (지능형 list에 비해)
+1
 
-
+## yield from (>python 3.3)
