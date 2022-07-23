@@ -26,7 +26,7 @@ public class MemoryMemberRepository implements MemberRepository {
     public Optional<Member> findByName(String name) {
         // values.stream :
         // 해당하는 Name과 일치하는 member가 있는지 모두 뒤져보며 찾는다.
-        store.values().stream()
+        return store.values().stream()
                 .filter(member -> member.getName().equals(name))
                 .findAny();
     }
