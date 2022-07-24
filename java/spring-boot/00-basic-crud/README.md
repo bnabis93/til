@@ -19,6 +19,22 @@ $ ./gradlew build
 $ java -jar build/lib/<SNAPSHOT>.jar
 ```
 
+## 사용하는 pattern
+- 사실 어떤 패턴을 사용하는지 정확히 모르겠다.
+- Clean architecture와 mvc의 혼합된 형태인것같기도하고, 아닌것 같기도 하고.
+### Controller
+  - Controller : Client와 소통하는 부분. 여러 Client로부터 오는 요청 및 응답에 대해 대응하는 부분. 
+    Client로 부터 온 요청을, DTO(Data Transfer Object)등을 이용하여, 형태로 가공하여 BE가 사용 할 수 있도록 해주기도 하고, 
+    비지니스 로직을 거친 응답을 위한 데이터를 보내주기도 한다.   
+  - DTO (Data Tranfer Object) : Data를 BE가 사용 가능한 형태로 변환 할 수 있게 해준다. (Data가 정의되어 있다.)
+### Service
+  - Domain과 application layer의 역할이 햇갈린다.  
+  - Service : 비지니스에 가까운 로직
+### Domain 
+  - Domain : 
+### Repository
+  - Repository :
+
 ## API
 ### Web server health check
 - Request
