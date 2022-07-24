@@ -36,6 +36,8 @@ $ java -jar build/lib/<SNAPSHOT>.jar
   - Repository :
 
 ## Spring bean
+- Spring bean은 spring container가 관리하는 자바 객체.
+  - 정확히는 Spring IoC (Inversion Of Control)에 의해 관리된다고 한다. 
 - Spring bean은 기본적으로 컨테이너에 singleton으로 등록된다. 
 ### @Component annotation
 - @Component annotation을 이용하여 spring bean 등록 가능
@@ -50,3 +52,4 @@ $ java -jar build/lib/<SNAPSHOT>.jar
 
 ## Reference
 - 김영한, [스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8)
+- [Spring Beans in Depth](https://medium.com/javarevisited/spring-beans-in-depth-a6d8b31db8a1#:~:text=By%20definition%2C%20a%20Spring%20bean,many%20objects%20in%20your%20application.)
