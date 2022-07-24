@@ -3,13 +3,17 @@ package bono.basiccrud.service;
 import bono.basiccrud.domain.Member;
 import bono.basiccrud.repository.MemberRepository;
 import bono.basiccrud.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+//@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
+    //@Autowired
     public MemberService(MemberRepository memberRepository) {
         // DI (Dependency injection) 외부에서 의존성 주입
         this.memberRepository = memberRepository;

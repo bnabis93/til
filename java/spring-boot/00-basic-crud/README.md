@@ -35,6 +35,11 @@ $ java -jar build/lib/<SNAPSHOT>.jar
 ### Repository
   - Repository :
 
+## Spring bean
+- Spring bean은 기본적으로 컨테이너에 singleton으로 등록된다. 
+### @Component annotation
+- @Component annotation을 이용하여 spring bean 등록 가능
+
 ## API
 ### Web server health check
 - Request
