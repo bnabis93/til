@@ -19,6 +19,11 @@ class DummyPacket(BaseModel):
     msg: str
 
 
+@app.get("/healthcheck")
+def healthcheck() -> bool:
+    """Server healthcheck api."""
+    return True
+
 @app.post("/items")
 async def helloworld(packet: DummyPacket) -> str:
     """Return Helloworld."""

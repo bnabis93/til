@@ -12,6 +12,6 @@ format:
 	black src .
 	isort src .
 
-helloworld:
+run-server:
 	uvicorn src.server:app --reload
 	
