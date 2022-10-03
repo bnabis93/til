@@ -25,7 +25,7 @@ def healthcheck() -> bool:
     return True
 
 @app.post("/helloworld")
-async def helloworld(packet: DummyPacket) -> str:
+def helloworld(packet: DummyPacket) -> str:
     """Return Helloworld."""
     print(f"request : {packet}")
     return f"packet id : {packet.dummy_id} msg : {packet.msg}"
