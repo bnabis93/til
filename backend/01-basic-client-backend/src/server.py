@@ -24,7 +24,7 @@ def healthcheck() -> bool:
     """Server healthcheck api."""
     return True
 
-@app.post("/items")
+@app.post("/helloworld")
 async def helloworld(packet: DummyPacket) -> str:
     """Return Helloworld."""
     print(f"request : {packet}")

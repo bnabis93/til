@@ -10,7 +10,7 @@ import urllib
 import requests
 
 BACKEND_URL = "http://localhost:8000"
-TARGET_URL = urllib.parse.urljoin(BACKEND_URL, "items")
+TARGET_URL = urllib.parse.urljoin(BACKEND_URL, "helloworld")
 
 dummy_data = {"dummy_id": "3", "msg": "helloworld"}
 
