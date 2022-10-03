@@ -24,8 +24,14 @@ def healthcheck() -> bool:
     """Server healthcheck api."""
     return True
 
-@app.post("/helloworld")
-def helloworld(packet: DummyPacket) -> str:
+@app.get("/helloworld")
+def helloworld() -> str:
+    """Simple helloworld api."""
+    print("Helloworld in server side.")
+    return "Helloworld response"
+
+@app.post("/simplepost")
+def simple_post(packet: DummyPacket) -> str:
     """Return Helloworld."""
-    print(f"request : {packet}")
+    print(f"request server side : {packet}")
     return f"packet id : {packet.dummy_id} msg : {packet.msg}"
