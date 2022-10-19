@@ -1,0 +1,15 @@
+# backend, latest stable version == 0.75.1
+fastapi           
+uvicorn[standard] 
+
+# frontend
+requests == 2.27.1
+types-requests == 2.27.16
+
+# formatter
+isort == 5.10.1                 # imports
+black == 22.1.0                 # coding style
+
+# Auth
+authlib
+itsdangerous
