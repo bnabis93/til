@@ -13,3 +13,4 @@ black == 22.1.0                 # coding style
 # Auth
 authlib
 itsdangerous
+httpx

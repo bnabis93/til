@@ -26,3 +26,11 @@ Authorized redirect URIs: http://127.0.0.1:7000/auth. We are going to create thi
 ## Create OAuth client
 - We need the `client_id` and `the client_secret`.
 - Use the environment variables `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`
+```
+$ export GOOGLE_CLIENT_ID=...
+$ export GOOGLE_CLIENT_SECRET=...
+```
+- Set secrete key
+```
+$ export SECRET_KEY=...
+```
