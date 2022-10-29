@@ -1,6 +1,7 @@
 # backend, latest stable version == 0.75.1
 fastapi           
 uvicorn[standard] 
+python-dotenv
 
 # frontend
 requests == 2.27.1
