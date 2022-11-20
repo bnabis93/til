@@ -1,6 +1,7 @@
 # Fastapi Oauth2.0 example (Google login)
 
 ## Create Google credential for oauto 2.0
+- https://console.cloud.google.com/apis/dashboard?project=storied-depot-334607
 - Google is resource server.
 1. Go to Credentials on the side panel.
 2. Go to Create Credentials -> OAuth client ID.
