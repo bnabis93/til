@@ -51,6 +51,10 @@ class MinHeap:
         """
         self.heap[fpos], self.heap[spos] = self.heap[spos], self.heap[fpos]
 
+    def min_heapify_practice(self, pos):
+        if not self.is_leaf(pos):
+            
+
     def min_heapify(self, pos):
         """
         Min heapify the heap.
