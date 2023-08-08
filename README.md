@@ -36,6 +36,7 @@
 - [cors](backend/cors.md)
 - [fastapi](backend/fastapi/)
     - [fastapi-basic-client-backend-example](backend/fastapi/baisc-client-backend/)
+- [grpc](backend/grpc/)
 
 ### Frontend
 - [React](frontend/react.md)
